@@ -34,7 +34,6 @@ export class TBody extends React.Component {
     updateUserInfo = (userId, field) => {
         return (e) => {
             const value = e.target.value;
-            this.updateUserInfo(value, field);
             this.setState((state) => {
                 const user = state[userId];
                 return {[userId]: {...user, [field]: value}};
